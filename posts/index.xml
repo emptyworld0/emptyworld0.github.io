@@ -1,14 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>All Posts - 我的全新 Hugo 网站</title>
+        <title>All Posts - Roc&#39;s Blog</title>
         <link>http://example.org/posts/</link>
-        <description>All Posts | 我的全新 Hugo 网站</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 14 Mar 2023 10:16:12 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+        <description>All Posts | Roc&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>rocz5686@gmail.com (Roc)</managingEditor>
+            <webMaster>rocz5686@gmail.com (Roc)</webMaster><lastBuildDate>Tue, 14 Mar 2023 10:16:12 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
     <title>First_post</title>
-    <link>http://example.org/first_post/</link>
+    <link>http://example.org/posts/first_post/</link>
     <pubDate>Tue, 14 Mar 2023 10:16:12 &#43;0800</pubDate>
-    <author>xxxx</author>
-    <guid>http://example.org/first_post/</guid>
+    <author>Roc</author>
+    <guid>http://example.org/posts/first_post/</guid>
     <description><![CDATA[这是第一篇文章]]></description>
 </item>
 </channel>

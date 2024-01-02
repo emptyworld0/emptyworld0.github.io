@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>cog review - Roc&#39;s Blog</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="cog review" />
+<meta property="og:description" content="cog 背景介绍 cog 是一款开源的容器化机器学习工具。可以提供容器化的机器学习环境，方便进行模型训练和部署。 简单来讲，使用cog后，可以通过定义一个y" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/cog-review/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-12-29T10:16:12+08:00" />
+<meta property="article:modified_time" content="2023-12-29T10:16:12+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="cog review"/>
+<meta name="twitter:description" content="cog 背景介绍 cog 是一款开源的容器化机器学习工具。可以提供容器化的机器学习环境，方便进行模型训练和部署。 简单来讲，使用cog后，可以通过定义一个y"/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/cog-review/" /><link rel="prev" href="http://example.org/posts/first_post/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "cog review",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/cog-review\/"
+        },"genre": "posts","wordcount":  1459 ,
+        "url": "http:\/\/example.org\/posts\/cog-review\/","datePublished": "2023-12-29T10:16:12+08:00","dateModified": "2023-12-29T10:16:12+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Roc"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Roc&#39;s Blog">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Roc&#39;s Blog">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">cog review</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Roc</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-12-29">2023-12-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1459 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#cog-背景介绍">cog 背景介绍</a></li>
+    <li><a href="#cog-代码概要">cog 代码概要</a></li>
+    <li><a href="#推理主体流程图">推理主体流程图：</a></li>
+    <li><a href="#结语">结语</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="cog-背景介绍">cog 背景介绍</h2>
+<p><a href="https://github.com/replicate/cog" target="_blank" rel="noopener noreffer ">cog</a> 是一款开源的容器化机器学习工具。可以提供容器化的机器学习环境，方便进行模型训练和部署。</p>
+<p>简单来讲，使用cog后，可以通过定义一个yaml，通过docker实现推理接口，而不用配置相关推理框架，例如tensorflow、pytorch等。可以实现一行命令调用模型推理，比较方便的调试模型。</p>
+<p>网上关于cog的文章较少，从tutorial开始看讲解的比较简单，这篇文章会做一些原理上的介绍。</p>
+<h2 id="cog-代码概要">cog 代码概要</h2>
+<p>cog的代码分为两部分，一部分是golang，一部分是python。执行make指令后，会分别编译这两部分。其中将golang代码编译成cog二进制文件,将python代码编译成whl。</p>
+<p>其中有用到golang 1.16的一个embed特性，将whlembed成[]byte数组，在必要的时候写入到docker中。但为什么要这样设计，表示存疑。其实完全可以用docker的copy命令来替换掉embed。</p>
+<p>golang用于编写工具化的部分，python负责运行推理的部分。在AI时代，python的推理地位基本上无法撼动了，我还没有见过其他语言的哪个库实现了tensorflow、pytorch等这些主流的推理库。</p>
+<h2 id="推理主体流程图">推理主体流程图：</h2>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/cog-process.jpg"
+        data-srcset="/cog-process.jpg, /cog-process.jpg 1.5x, /cog-process.jpg 2x"
+        data-sizes="auto"
+        alt="/cog-process.jpg"
+        title="主体流程" width="1387" height="640" /></p>
+<ul>
+<li>
+<p>首先，需要定义一个cog.yaml文件，该文件指定相关python开发版本，以及相关package版本(本质上是python的requirements.txt文件)。这个阶段有一个py文件比较重要，predict.py。这个文件会定义一个predict函数，该函数会返回一个predictor对象。</p>
+</li>
+<li>
+<p>其次，运行./cog predict 后，golang编译出来的程序会根据cog.yaml 文件，生成一个dockerfile，以备后续build阶段使用。它使用两段式生成docker的方法，第二个运行阶段会使用第一个阶段的artifact。一个典型的dockerfile如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl">  <span class="c1">#syntax=docker/dockerfile:1.4</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  FROM python:3.11 as deps<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  COPY .cog/tmp/build2428490134/cog-0.0.1.dev-py3-none-any.whl /tmp/cog-0.0.1.dev-py3-none-any.whl<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  RUN --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>cache,target<span class="o">=</span>/root/.cache/pip pip install -t /dep /tmp/cog-0.0.1.dev-py3-none-any.whl<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  COPY .cog/tmp/build2428490134/requirements.txt /tmp/requirements.txt<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  RUN --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>cache,target<span class="o">=</span>/root/.cache/pip pip install -t /dep -r /tmp/requirements.txt<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  FROM python:3.11-slim<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  ENV <span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  ENV <span class="nv">PYTHONUNBUFFERED</span><span class="o">=</span><span class="m">1</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  ENV <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$LD_LIBRARY_PATH</span>:/usr/lib/x86_64-linux-gnu:/usr/local/nvidia/lib64:/usr/local/nvidia/bin<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  ENV <span class="nv">NVIDIA_DRIVER_CAPABILITIES</span><span class="o">=</span>all<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  RUN --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>cache,target<span class="o">=</span>/var/cache/apt <span class="nb">set</span> -eux<span class="p">;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  apt-get update -qq<span class="p">;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  apt-get install -qqy --no-install-recommends curl<span class="p">;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  rm -rf /var/lib/apt/lists/*<span class="p">;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="nv">TINI_VERSION</span><span class="o">=</span>v0.19.0<span class="p">;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="nv">TINI_ARCH</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>dpkg --print-architecture<span class="k">)</span><span class="s2">&#34;</span><span class="p">;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  curl -sSL -o /sbin/tini <span class="s2">&#34;https://github.com/krallin/tini/releases/download/</span><span class="si">${</span><span class="nv">TINI_VERSION</span><span class="si">}</span><span class="s2">/tini-</span><span class="si">${</span><span class="nv">TINI_ARCH</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  chmod +x /sbin/tini<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  ENTRYPOINT <span class="o">[</span><span class="s2">&#34;/sbin/tini&#34;</span>, <span class="s2">&#34;--&#34;</span><span class="o">]</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  COPY --from<span class="o">=</span>deps --link /dep /usr/local/lib/python3.11/site-packages<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  WORKDIR /src<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  EXPOSE <span class="m">5000</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  CMD <span class="o">[</span><span class="s2">&#34;python&#34;</span>, <span class="s2">&#34;-m&#34;</span>, <span class="s2">&#34;cog.server.http&#34;</span><span class="o">]</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  COPY . /src<span class="err">
+</span></span></span></code></pre></div></li>
+<li>
+<p>再次，dockerbuild完毕后，会执行</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">docker run --rm --shm-size 8G --detach --env <span class="nv">COG_LOG_LEVEL</span><span class="o">=</span>warning --publish 0:5000 --mount <span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/your_cog_project_path/,destination<span class="o">=</span>/src cog-quickstart-base
+</span></span></code></pre></div><p>将用户定义的目录挂载到docker中，并启动容器。
+其中&ndash;shm-size 8G 是分配给docker的内存大小，可以根据实际情况进行调整。</p>
+</li>
+<li>
+<p>最后，通过curl请求，调用docker中的predict函数。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">curl -X POST http://localhost:5000/predict -F <span class="nv">image</span><span class="o">=</span>@image.jpeg
+</span></span></code></pre></div><p>这里最开始我有个疑问，dockerfile里没有打包predict.py，那么predict函数是如何被调用的呢？</p>
+<p>后来发现，predict函数是在cog.yaml中定义的，在docker启动的时候，predict.py会被拷贝到docker中。通过python的importlib来动态加载使用者自己定义的preict函数。这里如果用golang实现，确实没法实现这么灵活的加载。</p>
+</li>
+</ul>
+<p>以上就是整个的推理流程。</p>
+<h2 id="结语">结语</h2>
+<p>cog 为模型的调试使用，的确很方便。使用者可以自己定义python文件，简单定义完一个yaml后，就可以直接调用模型进行测试了。</p>
+<p>但是对于生产环境，cog的使用场景还是比较少的。因为cog只是提供了一个简单的容器化环境，并没有提供其他生产环境所需要的功能。例如，没有提供模型管理、模型部署等功能。</p>
+<p>总的来说，cog更适合用于模型调试，而非生产环境。对于了解一个模型推理的0-1过程还是不错的。目前阶段可能实验室的同学用的多一些，生产环境见到用cog的还是比较少的。</p>
+<h2 id="参考">参考</h2>
+<p><a href="https://github.com/replicate/cog" target="_blank" rel="noopener noreffer ">cog</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-12-29</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/cog-review/" data-title="cog review"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/cog-review/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/cog-review/" data-title="cog review"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/cog-review/" data-title="cog review"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/cog-review/" data-title="cog review"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/first_post/" class="prev" rel="prev" title="First_post"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>First_post</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.111.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Roc</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

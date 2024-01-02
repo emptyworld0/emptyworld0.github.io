@@ -1,31 +1,31 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>All Posts - Roc&#39;s Blog</title>
-        <link>http://example.org/posts/</link>
+        <link>https://emptyworld0.github.io/posts/</link>
         <description>All Posts | Roc&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>rocz5686@gmail.com (Roc)</managingEditor>
-            <webMaster>rocz5686@gmail.com (Roc)</webMaster><lastBuildDate>Tue, 02 Jan 2024 15:21:33 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>rocz5686@gmail.com (Roc)</webMaster><lastBuildDate>Tue, 02 Jan 2024 15:21:33 &#43;0800</lastBuildDate><atom:link href="https://emptyworld0.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Tidy Up</title>
-    <link>http://example.org/posts/tidy-up/</link>
+    <link>https://emptyworld0.github.io/posts/tidy-up/</link>
     <pubDate>Tue, 02 Jan 2024 15:21:33 &#43;0800</pubDate>
     <author>Roc</author>
-    <guid>http://example.org/posts/tidy-up/</guid>
+    <guid>https://emptyworld0.github.io/posts/tidy-up/</guid>
     <description><![CDATA[题记 元旦假期，在家和媳妇好好收拾了一下房间。住到这间房子里已经有7年时间了。除了每天在这里居住，并没有认真的观察过这间房子。这次收拾基本上把]]></description>
 </item>
 <item>
     <title>cog review</title>
-    <link>http://example.org/posts/cog-review/</link>
+    <link>https://emptyworld0.github.io/posts/cog-review/</link>
     <pubDate>Fri, 29 Dec 2023 10:16:12 &#43;0800</pubDate>
     <author>Roc</author>
-    <guid>http://example.org/posts/cog-review/</guid>
+    <guid>https://emptyworld0.github.io/posts/cog-review/</guid>
     <description><![CDATA[cog 背景介绍 cog 是一款开源的容器化机器学习工具。可以提供容器化的机器学习环境，方便进行模型训练和部署。 简单来讲，使用cog后，可以通过定义一个y]]></description>
 </item>
 <item>
     <title>First_post</title>
-    <link>http://example.org/posts/first_post/</link>
+    <link>https://emptyworld0.github.io/posts/first_post/</link>
     <pubDate>Tue, 14 Mar 2023 10:16:12 &#43;0800</pubDate>
     <author>Roc</author>
-    <guid>http://example.org/posts/first_post/</guid>
+    <guid>https://emptyworld0.github.io/posts/first_post/</guid>
     <description><![CDATA[这是第一篇文章]]></description>
 </item>
 </channel>

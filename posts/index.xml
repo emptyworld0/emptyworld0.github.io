@@ -4,7 +4,15 @@
         <link>http://example.org/posts/</link>
         <description>All Posts | Roc&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>rocz5686@gmail.com (Roc)</managingEditor>
-            <webMaster>rocz5686@gmail.com (Roc)</webMaster><lastBuildDate>Fri, 29 Dec 2023 10:16:12 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>rocz5686@gmail.com (Roc)</webMaster><lastBuildDate>Tue, 02 Jan 2024 15:21:33 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Tidy Up</title>
+    <link>http://example.org/posts/tidy-up/</link>
+    <pubDate>Tue, 02 Jan 2024 15:21:33 &#43;0800</pubDate>
+    <author>Roc</author>
+    <guid>http://example.org/posts/tidy-up/</guid>
+    <description><![CDATA[题记 元旦假期，在家和媳妇好好收拾了一下房间。住到这间房子里已经有7年时间了。除了每天在这里居住，并没有认真的观察过这间房子。这次收拾基本上把]]></description>
+</item>
+<item>
     <title>cog review</title>
     <link>http://example.org/posts/cog-review/</link>
     <pubDate>Fri, 29 Dec 2023 10:16:12 &#43;0800</pubDate>

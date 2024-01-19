@@ -4,7 +4,15 @@
         <link>https://emptyworld0.github.io/posts/</link>
         <description>All Posts | Roc&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>rocz5686@gmail.com (Roc)</managingEditor>
-            <webMaster>rocz5686@gmail.com (Roc)</webMaster><lastBuildDate>Tue, 02 Jan 2024 15:21:33 &#43;0800</lastBuildDate><atom:link href="https://emptyworld0.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>rocz5686@gmail.com (Roc)</webMaster><lastBuildDate>Fri, 19 Jan 2024 17:43:31 &#43;0800</lastBuildDate><atom:link href="https://emptyworld0.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>maas研究之Bentoml入门</title>
+    <link>https://emptyworld0.github.io/posts/bentoml-1/</link>
+    <pubDate>Fri, 19 Jan 2024 17:43:31 &#43;0800</pubDate>
+    <author>Roc</author>
+    <guid>https://emptyworld0.github.io/posts/bentoml-1/</guid>
+    <description><![CDATA[背景 最近在研究maas(model as a service)相关概念,比较出名的如kserve(kubeflow的子项目)，Seldon(英国公司]]></description>
+</item>
+<item>
     <title>Tidy Up</title>
     <link>https://emptyworld0.github.io/posts/tidy-up/</link>
     <pubDate>Tue, 02 Jan 2024 15:21:33 &#43;0800</pubDate>

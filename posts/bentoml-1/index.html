@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>maas研究之Bentoml入门 - Roc&#39;s Blog</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="maas研究之Bentoml入门" />
+<meta property="og:description" content="背景 最近在研究maas(model as a service)相关概念,比较出名的如kserve(kubeflow的子项目)，Seldon(英国公司" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://emptyworld0.github.io/posts/bentoml-1/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-19T17:43:31+08:00" />
+<meta property="article:modified_time" content="2024-01-19T17:43:31+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="maas研究之Bentoml入门"/>
+<meta name="twitter:description" content="背景 最近在研究maas(model as a service)相关概念,比较出名的如kserve(kubeflow的子项目)，Seldon(英国公司"/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://emptyworld0.github.io/posts/bentoml-1/" /><link rel="prev" href="https://emptyworld0.github.io/posts/tidy-up/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "maas研究之Bentoml入门",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/emptyworld0.github.io\/posts\/bentoml-1\/"
+        },"genre": "posts","wordcount":  1210 ,
+        "url": "https:\/\/emptyworld0.github.io\/posts\/bentoml-1\/","datePublished": "2024-01-19T17:43:31+08:00","dateModified": "2024-01-19T17:43:31+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Roc"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Roc&#39;s Blog">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Roc&#39;s Blog">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">maas研究之Bentoml入门</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Roc</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-01-19">2024-01-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1210 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#背景">背景</a></li>
+    <li><a href="#需要解决什么问题">需要解决什么问题</a></li>
+    <li><a href="#整体结构">整体结构</a></li>
+    <li><a href="#本地开发环境搭建">本地开发环境搭建</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="背景">背景</h2>
+<p>最近在研究maas(model as a service)相关概念,比较出名的如kserve(kubeflow的子项目)，Seldon(英国公司，主要客户偏向企业级)，MLFlow(apache的项目，模型方向的多偏底层，devops较少)。以及今天的主角bentoml。</p>
+<p>几款框架应该概念都差不多，选择bentoml主要是这个比较新，看了官网和github，感觉比较活跃，社区也比较活跃，而且文档比较详细。看slack华人也较为活跃。
+如果想开发一款AI Application，从开发到部署，bentoml都可以管理起来，整个流程serverless相对比较完善。毕竟现在都推serverless，越来越lean。</p>
+<h2 id="需要解决什么问题">需要解决什么问题</h2>
+<p>如果现在我想要开发一款AI Native的应用，中国古诗词AI助手，对诗词对对联，弘扬中华传统文化的应用，需要解决什么问题？</p>
+<ul>
+<li>我需要怎么样才能训练出来一个这样的模型？基模型可能都差不多，那么如何特训出一个适合这个应用的模型？</li>
+<li>训练出的模型如何进行推理？</li>
+<li>模型训练好了，如何部署到线上？</li>
+<li>线上部署好了，如何进行监控？包含后续数据收集更好的迭代模型。</li>
+</ul>
+<p>还有很多其他问题，但是以上四个问题对于一个想开发AI Native App的人来说是核心问题。我认为maas应该解决2-4的问题。而bentoml确实也做好了这个角色，问题1一般来讲由hugging face来解决了。我认为个人开发者依靠自己训练出来一款可以商业的模型概率是极低的，最靠谱的就是从hugging face这样的社区找，然后微调。</p>
+<p>以搞懂原理，可以提供contribute为目标。这一篇先讲一下整体结构以及如何搭建本地开发环境。</p>
+<h2 id="整体结构">整体结构</h2>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./bento-client.jpg"
+        data-srcset="./bento-client.jpg, ./bento-client.jpg 1.5x, ./bento-client.jpg 2x"
+        data-sizes="auto"
+        alt="./bento-client.jpg"
+        title="主体流程" /></p>
+<ul>
+<li>首先bentoml产品可以分成bento和bentocloud两大块。bento负责本地开发，bentocloud负责部署。bento适配了各种推理组件从TensorFlow、pytorch、scikit等等。推理出来变得不那么难可以说是解决了问题1。相当于bentoml提供了一个Python的SDK，可以快速将hugging face的模型推出来。</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./bento-cloud.jpg"
+        data-srcset="./bento-cloud.jpg, ./bento-cloud.jpg 1.5x, ./bento-cloud.jpg 2x"
+        data-sizes="auto"
+        alt="./bento-cloud.jpg"
+        title="主体云流程" /></p>
+<ul>
+<li>其次部署方面，它定义了一个新概念叫做bento(便当)，一个bento是一个maas应用，可以包含多个模型，类似docker是一个管理的粒度。bento可以推到相关的registery，然后通过bentocloud拉取使用。</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./yatai-cloud.jpg"
+        data-srcset="./yatai-cloud.jpg, ./yatai-cloud.jpg 1.5x, ./yatai-cloud.jpg 2x"
+        data-sizes="auto"
+        alt="./yatai-cloud.jpg"
+        title="yatai流程" />
+bento 本身既是一个binary也是一个SDK，这部分我们不是我们本篇范畴，我们今天主要聚焦在cloud上。cloud主要分为yatai，yatai-deployment，以及yatai-image-builder 3个模块。我们需要在本地搭建一个yatai cloud，以及推一个bento到yatai cloud(也就是上面说的bentocloud)。</p>
+<h2 id="本地开发环境搭建">本地开发环境搭建</h2>
+<p>我的电脑是mba，m2芯片，8gb内存，整个yatai搭建完成后有点卡，推荐使用更高的配置最好。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2024-01-19</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://emptyworld0.github.io/posts/bentoml-1/" data-title="maas研究之Bentoml入门"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://emptyworld0.github.io/posts/bentoml-1/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://emptyworld0.github.io/posts/bentoml-1/" data-title="maas研究之Bentoml入门"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://emptyworld0.github.io/posts/bentoml-1/" data-title="maas研究之Bentoml入门"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://emptyworld0.github.io/posts/bentoml-1/" data-title="maas研究之Bentoml入门"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/tidy-up/" class="prev" rel="prev" title="Tidy Up"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Tidy Up</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.111.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Roc</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
